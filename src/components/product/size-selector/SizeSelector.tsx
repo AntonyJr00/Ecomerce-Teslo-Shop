@@ -13,14 +13,9 @@ export const SizeSelector = ({ selectedSize, availableSizes }: Props) => {
       <div>
         {availableSizes.map((size, i) => (
           <button
-            className={clsx(
-              `text-lg hover:underline pr-2 transition-all ${
-                i !== 0 && "pl-2"
-              }`,
-              {
-                "underline font-semibold": size === selectedSize,
-              }
-            )}
+            className={clsx(`text-lg hover:underline mr-4 transition-all`, {
+              "underline font-semibold": size === selectedSize,
+            })}
             key={i}
           >
             {size}

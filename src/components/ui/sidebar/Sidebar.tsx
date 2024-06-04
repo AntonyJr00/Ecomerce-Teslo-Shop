@@ -65,21 +65,21 @@ export const Sidebar = () => {
           <span className="text-xl ml-3">Perfil</span>
         </Link>
         <Link
-          href={"/"}
+          href={"/orders"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoTicketOutline size={30} />
           <span className="text-xl ml-3">Ordenes</span>
         </Link>
         <Link
-          href={"/"}
+          href={"/login"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoLogInOutline size={30} />
           <span className="text-xl ml-3">Ingresar</span>
         </Link>
         <Link
-          href={"/"}
+          href={"/logout"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoLogOutOutline size={30} />
@@ -89,21 +89,21 @@ export const Sidebar = () => {
         <div className="w-full h-px bg-slate-400 my-10"></div>
 
         <Link
-          href={"/"}
+          href={"/products"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoShirtOutline size={30} />
           <span className="text-xl ml-3">Productos</span>
         </Link>
         <Link
-          href={"/"}
+          href={"/orders"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoTicketOutline size={30} />
           <span className="text-xl ml-3">Ordenes</span>
         </Link>
         <Link
-          href={"/"}
+          href={"/account"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoPeopleOutline size={30} />

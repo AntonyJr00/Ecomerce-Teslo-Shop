@@ -6,7 +6,7 @@ import { ButtonOpenMenu } from "./ButtonOpenMenu";
 
 export const TopMenu = () => {
   return (
-    <nav className="flex px-6 py-2 justify-between items-center w-full">
+    <nav className="flex px-6 py-2 justify-between items-center w-full sticky top-0 z-20 bg-slate-200 dark:bg-slate-800">
       <div>
         <Link href={"/"}>
           <span
@@ -42,7 +42,7 @@ export const TopMenu = () => {
         <Link href={"/search"} className="mx-2">
           <IoSearchOutline className="w-5 h-5" />
         </Link>
-        <Link href={"/search"} className="mx-2">
+        <Link href={"/cart"} className="mx-2">
           <div className="relative">
             <span className="absolute text-xs -right-2 -top-2 bg-red-400 rounded-full px-1">
               3
