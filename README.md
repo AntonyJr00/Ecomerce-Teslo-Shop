@@ -15,11 +15,13 @@ Este proyecto utiliza Next.js para la renderización del lado del servidor (SSR)
 
 Primero, clona el repositorio y luego instala las dependencias:
 
-```bash
-git clone https://github.com/tu_usuario/teslo-shop.git
-cd teslo-shop
-npm install
-```
+1. Clonar repositorio: `git clone https://github.com/tu_usuario/teslo-shop.git`
+2. Crear una copia del archivo: `.env.template` y cambiarle el nombre a `.env` y cambiar las variables de entorno.
+3. Instalar dependencias: `npm install`
+4. Levantar la base de datos en Docker: `docker -compose up -d`
+5. Correr ñas migraciones de Prisma: `npx prisma migrate dev`
+6. Ejecutar el comando: `npm run seed`
+7. Correr el proyecto: `npm run dev`
 
 # Estructura del Proyecto
 
