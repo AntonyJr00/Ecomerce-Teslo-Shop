@@ -6,11 +6,9 @@ async function main() {
 
   //Todo: 1. Borrar Registros
 
-  await Promise.all([
-    prisma.productImage.deleteMany(),
-    prisma.product.deleteMany(),
-    prisma.category.deleteMany(),
-  ]);
+  await prisma.productImage.deleteMany();
+  await prisma.product.deleteMany();
+  await prisma.category.deleteMany();
 
   //Todo: 2. Insertar Categories
 
@@ -33,9 +31,9 @@ async function main() {
   //Todo: 3. Productos_
 
   products.forEach(async (product) => {
-    const { images, ...rest } = product;
+    const { images, type, ...rest } = product;
     const dbProduct = await prisma.product.create({
-      data: { ...rest, categoryId: categoriesMap[rest.type] },
+      data: { ...rest, categoryId: categoriesMap[type] },
     });
 
     const imagesData = images.map((image) => ({

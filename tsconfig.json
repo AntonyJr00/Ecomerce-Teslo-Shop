@@ -23,7 +23,9 @@
       "@config/*": ["./src/config/*"],
       "@interface/*": ["./src/interface/*"],
       "@seed/*": ["./src/seed/*"],
-      "@store/*": ["./src/store/*"]
+      "@store/*": ["./src/store/*"],
+      "@actions/*": ["./src/actions/*"],
+      "@utils/*": ["./src/utils/*"]
       // "@/*": ["./src/*"]
     }
   },

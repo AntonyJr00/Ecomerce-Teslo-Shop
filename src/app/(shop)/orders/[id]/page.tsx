@@ -1,9 +1,8 @@
 import { Title } from "@components/index";
-import { Product } from "@interface/product.interface";
-import { initialData } from "@seed/seed";
 import clsx from "clsx";
 import Image from "next/image";
 import { IoCardOutline } from "react-icons/io5";
+import { getPaginatedProductWithImages } from "@actions/index";
 
 interface Props {
   params: {
@@ -11,14 +10,10 @@ interface Props {
   };
 }
 
-const productInCart: Product[] = [
-  initialData.products[0],
-  initialData.products[1],
-  initialData.products[2],
-];
-
-export default function CheckoutPage({ params }: Props) {
+export default async function OrderByIdPage({ params }: Props) {
   const { id } = params;
+
+  const { products: productInCart } = await getPaginatedProductWithImages({});
 
   //todo: Verificar--
   // redirect
@@ -47,7 +42,6 @@ export default function CheckoutPage({ params }: Props) {
                 <Image
                   width={100}
                   height={100}
-                  priority
                   src={`/products/${product.images[0]}`}
                   alt={product.title}
                   className="mr-6 rounded w-auto h-auto"

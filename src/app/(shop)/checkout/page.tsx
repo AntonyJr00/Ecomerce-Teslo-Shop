@@ -4,7 +4,7 @@ import { initialData } from "@seed/seed";
 import Image from "next/image";
 import Link from "next/link";
 
-const productInCart: Product[] = [
+const productInCart = [
   initialData.products[0],
   initialData.products[1],
   initialData.products[2],
