@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 
-// import type { Swiper as SwiperObject } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
 
@@ -33,11 +32,12 @@ export const ProductMobileSlideShow = ({ images, title, className }: Props) => {
         modules={[FreeMode, Pagination]}
         onSwiper={(swiper) => console.log(swiper)}
         style={styleSlide}
+        loop={false}
       >
         {images.map((image) => (
           <SwiperSlide key={image}>
             <Image
-              priority
+              loading="lazy"
               width={600}
               height={500}
               src={`/products/${image}`}

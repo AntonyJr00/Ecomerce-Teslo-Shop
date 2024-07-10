@@ -24,7 +24,7 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
   return (
     <div className={className}>
       <Swiper
-        loop
+        loop={images.length > 2}
         navigation
         spaceBetween={10}
         slidesPerView={1}
@@ -44,7 +44,7 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
         {images.map((image) => (
           <SwiperSlide key={image}>
             <Image
-              priority
+              loading="lazy"
               width={1024}
               height={800}
               src={`/products/${image}`}
@@ -55,7 +55,7 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
       </Swiper>
 
       <Swiper
-        loop={images.length > 4}
+        loop={images.length > 2}
         onSwiper={setThumbSwiper}
         spaceBetween={10}
         slidesPerView={4}
@@ -68,7 +68,7 @@ export const ProductSlideShow = ({ images, title, className }: Props) => {
         {images.map((image) => (
           <SwiperSlide key={image}>
             <Image
-              priority
+              loading="lazy"
               width={200}
               height={200}
               src={`/products/${image}`}

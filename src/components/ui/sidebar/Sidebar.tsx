@@ -33,7 +33,7 @@ export const Sidebar = () => {
 
       <nav
         className={clsx(
-          "fixed p-5 right-0 top-0 w-[500px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
+          "fixed p-5 right-0 top-0 w-[70%] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
           {
             "translate-x-full": !isSideMenuOpen,
           }
@@ -72,14 +72,14 @@ export const Sidebar = () => {
           <span className="text-xl ml-3">Ordenes</span>
         </Link>
         <Link
-          href={"/login"}
+          href={"/auth/login"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoLogInOutline size={30} />
           <span className="text-xl ml-3">Ingresar</span>
         </Link>
         <Link
-          href={"/logout"}
+          href={"/auth/logout"}
           className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
         >
           <IoLogOutOutline size={30} />

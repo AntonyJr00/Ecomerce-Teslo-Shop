@@ -3,6 +3,7 @@ export * from "./product/size-selector/SizeSelector";
 export * from "./product/quantity-selector/QuantitySelector";
 export * from "./product/slide-show/ProductSlideShow";
 export * from "./product/slide-show/ProductMoblieSlideShow";
+export * from "./product/stock-label/StockLabel";
 
 //* Products-------------------
 export * from "./products/product-grid/ProductGrid";
