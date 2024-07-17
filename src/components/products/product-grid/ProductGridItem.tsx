@@ -25,12 +25,14 @@ export const ProductGridItem = ({ product }: Props) => {
           priority
         />
       </Link>
-      <div className="text-white p-4 flex flex-col">
+      <div className="text-white pl-2 py-4 flex flex-col">
         <Link
           href={`/product/${product.slug}`}
           className="text-xs font-bold truncate hover:text-blue-500"
         >
-          {product.title}
+          {product.title.length > 40
+            ? product.title.substring(0, 37) + "..."
+            : product.title}
         </Link>
         <span className="font-semibold">$ {product.price}</span>
       </div>
